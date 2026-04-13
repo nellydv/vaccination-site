@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine RK - Национальный календарь</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-shield-virus"></i> Vaccine<span>RK</span></div>
+        <div class="lang-buttons">
+            <button onclick="changeLang('kz')">ҚАЗ</button>
+            <button onclick="changeLang('ru')" class="active">РУС</button>
+            <button onclick="changeLang('en')">ENG</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1 id="hero-title">Защитите будущее своего ребенка</h1>
+        <p id="hero-sub">Интерактивный гид по вакцинации в Республике Казахстан</p>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 id="calc-h"><i class="fas fa-calculator"></i> Калькулятор прививок</h2>
+            <div class="calc-box">
+                <p id="calc-desc">Введите дату рождения ребенка:</p>
+                <input type="date" id="birthdate">
+                <button onclick="generateSchedule()" id="btn-calc">Рассчитать график</button>
+            </div>
+            <div id="schedule-output"></div>
+        </section>
+
+        <section class="section">
+            <h2 id="myth-h"><i class="fas fa-lightbulb"></i> Мифы и Реальность</h2>
+            <div class="myth-grid" id="myth-container"></div>
+        </section>
+
+        <section class="section">
+            <h2 id="faq-h"><i class="fas fa-question-circle"></i> Часто задаваемые вопросы</h2>
+            <div id="faq-container"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
